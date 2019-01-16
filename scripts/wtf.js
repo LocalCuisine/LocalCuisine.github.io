@@ -244,23 +244,23 @@ var WTF = (function() {
 
       var idea = "Take @howmany @food, ";
       for (var x = 0; x < numPrepares; x++) {
-        idea+= "@prepare ";
+        idea+= "@prepare, ";
       }
       idea += "and then ";
       for (var x = 0; x < numCooks; x++) {
-        idea+= "@cook ";
+        idea+= "@cook, ";
       }
       idea = idea.trim() + ". After @time, ";
 
       var needsAnd = false;
       for (var x = 0; x < numPrepare2; x++) {
         needsAnd = true;
-        idea+= "@prepare ";
+        idea+= "@prepare, ";
       }
 
       for (var x = 0; x < numCooks2; x++) {
         needsAnd = true;
-        idea+= "@cook ";
+        idea+= "@cook, ";
       }
 
       if (needsAnd) {
