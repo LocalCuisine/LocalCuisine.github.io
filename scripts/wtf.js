@@ -248,7 +248,12 @@ var WTF = (function() {
       }
       idea += "and then ";
       for (var x = 0; x < numCooks; x++) {
-        idea+= "@cook, ";
+        if ((numCooks - x) > 1) {
+          idea+= "@cook, ";
+        } else {
+          idea+= "@cook ";
+        }
+
       }
       idea = idea.trim() + ". After @time, ";
 
